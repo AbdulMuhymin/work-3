@@ -1,0 +1,161 @@
+/* reset  */
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+}
+/* header start */
+header {
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 4px 78px;
+  position: absolute;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  header {
+    padding: 20px;
+  }
+}
+
+header .logo img {
+  width: 120px;
+  height: 110px;
+}
+@media (max-width: 767px) {
+  header .logo img {
+    width: 50px;
+    height: 45px;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .fa-bars {
+  color: white;
+  display: none;
+}
+@media (max-width: 767px) {
+  header nav .fa-bars {
+    display: block;
+  }
+}
+.navbar ul {
+  display: flex;
+}
+@media (max-width: 767px) {
+   /* .navbar .menu{
+    transform: translateX(-100%);
+    transition: transform ease 0.3s; */
+  } 
+  .navbar .menu {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    height: 700px;
+    position: fixed;
+    left: 0;  
+    top: 80px;
+    padding: 30px 0;
+    display: none;
+    text-align: center;
+  }
+  .navbar .menu.open {
+    display: block;
+  }
+
+
+.navbar li {
+  font-weight: 400;
+  padding: 35px 26px;
+}
+.navbar a {
+  padding: 8px;
+}
+.navbar li a {
+  color: white;
+  font-size: 22px;
+}
+/* .navbar li:last-child a{
+    padding-right: 0;
+ }
+ */
+.navbar li a {
+  transition: color ease-in-out 0.7s;
+}
+.navbar li:hover a {
+  color: red;
+}
+.navbar li.active a {
+  border-bottom: 2px solid red;
+}
+/* header Ends */
+
+/* main */
+.contianer {
+  position: relative;
+}
+.contianer img {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+@media (max-width:767px){
+  .contianer img{
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+.contianer .info {
+  position: absolute;
+  /* top: 50%;
+left: 118px;
+transform: translateY(-50%); */
+  top: 0;
+  bottom: 0;
+  left: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contianer .info h1 {
+  color: white;
+  font-size: 54px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+.contianer .info .cta-btn {
+  width: 250px;
+  background-color: red;
+  mix-blend-mode: overlay;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  padding: 10px 18px;
+  text-align: center;
+  border-radius: 24px;
+  transition: background ease-in-out 0.7s;
+}
+.contianer .info .cta-btn:hover {
+  background: black;
+}
+
+/* main end */
